@@ -50,7 +50,8 @@ export function HeroSlider() {
 
   useEffect(() => {
     const id = window.setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000);
-    return () => window.clearInterval(id);
+    const current = slides[index] ?? slides[0]!;
+  return () => window.clearInterval(id);
   }, [index]);
 
   return (
@@ -98,15 +99,15 @@ export function HeroSlider() {
               Producción y comercialización de aguaymanto
             </p>
             <h1 className="text-balance font-display text-4xl leading-[1.1] text-primary-foreground sm:text-5xl lg:text-6xl">
-              {slides[index].title}
+              {current.title}
             </h1>
-            {slides[index].text && (
+            {current.text && (
               <p className="mt-5 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
-                {slides[index].text}
+                {current.text}
               </p>
             )}
             <div className="mt-8 flex flex-wrap gap-3">
-              {slides[index].actions.map((action) => (
+              {current.actions.map((action) => (
                 <Button key={action.label} asChild variant={action.variant} size="xl">
                   <Link to={action.to}>{action.label}</Link>
                 </Button>

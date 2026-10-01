@@ -22,8 +22,8 @@ export function ContactForm({
   defaultProduct,
   defaultSubject,
 }: {
-  defaultProduct?: string;
-  defaultSubject?: string;
+  defaultProduct?: string | undefined;
+  defaultSubject?: string | undefined;
 }) {
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
@@ -71,7 +71,7 @@ export function ContactForm({
   }
 
   const fieldClass = (name: string) =>
-    errors[name] ? "border-destructive focus-visible:ring-destructive" : "";
+    errors[name as Field] ? "border-destructive focus-visible:ring-destructive" : "";
 
   return (
     <form onSubmit={handleSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
