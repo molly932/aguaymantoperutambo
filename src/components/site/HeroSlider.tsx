@@ -50,10 +50,10 @@ export function HeroSlider() {
 
   useEffect(() => {
     const id = window.setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000);
-    const current = slides[index] ?? slides[0]!;
   return () => window.clearInterval(id);
   }, [index]);
 
+  const current = slides[index] ?? slides[0]!;
   return (
     <section
       aria-label="Presentación principal"
