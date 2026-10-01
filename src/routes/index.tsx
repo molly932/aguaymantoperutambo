@@ -127,7 +127,7 @@ function Index() {
           <SectionTitle eyebrow="¿Por qué elegirnos?" title="Razones para trabajar con nosotros" />
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {razones.map((razon, i) => {
-              const Icon = iconos[i % iconos.length];
+              const Icon = iconos[i % iconos.length] ?? Sprout;
               return (
                 <Reveal as="li" key={razon.title} delay={i * 80}>
                   <div className="h-full rounded-xl border border-border bg-card p-6 transition-colors duration-300 hover:border-leaf/40">

@@ -61,7 +61,7 @@ export function Gallery() {
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={items[active].alt}
+          aria-label={items[active]?.alt}
           className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-4 animate-fade-in-slow"
           onClick={() => setActive(null)}
         >
@@ -74,8 +74,8 @@ export function Gallery() {
             <X className="size-5" aria-hidden="true" />
           </button>
           <img
-            src={items[active].src}
-            alt={items[active].alt}
+            src={items[active]?.src}
+            alt={items[active]?.alt}
             className="max-h-[85vh] w-auto max-w-full rounded-lg object-contain"
           />
         </div>

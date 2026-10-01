@@ -6,7 +6,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { products } from "@/data/products";
 
-type Errors = Record<string, string>;
+type Field = "nombre" | "email" | "telefono" | "mensaje";
+type Errors = Partial<Record<Field, string>>;
 
 const tiposCliente = [
   "Cliente particular",
@@ -21,8 +22,8 @@ export function ContactForm({
   defaultProduct,
   defaultSubject,
 }: {
-  defaultProduct?: string;
-  defaultSubject?: string;
+  defaultProduct?: string | undefined;
+  defaultSubject?: string | undefined;
 }) {
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
@@ -30,7 +31,7 @@ export function ContactForm({
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
+    const data = Object.fromEntries(new FormData(form).entries()) as Partial<Record<Field, string>>;
     const next: Errors = {};
 
     if (!data.nombre?.trim()) next.nombre = "Ingresa tu nombre completo.";
@@ -70,7 +71,7 @@ export function ContactForm({
   }
 
   const fieldClass = (name: string) =>
-    errors[name] ? "border-destructive focus-visible:ring-destructive" : "";
+    errors[name as Field] ? "border-destructive focus-visible:ring-destructive" : "";
 
   return (
     <form onSubmit={handleSubmit} noValidate className="grid gap-5 sm:grid-cols-2">
