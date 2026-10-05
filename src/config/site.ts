@@ -11,6 +11,10 @@ export const siteConfig = {
   url: "https://aguaymantoperu.com",
   description:
     "Producción y comercialización de aguaymanto peruano seleccionado. Venta al por mayor y atención a restaurantes, tiendas y distribuidores.",
+  featuredVideo: {
+    title: "Conoce el cultivo del aguaymanto",
+    youtubeEmbedUrl: "https://www.youtube.com/embed/KquI_AS5ChY?autoplay=1&rel=0",
+  },
   contact: {
     phone: "[TELÉFONO]",
     // Número en formato internacional sin signos, ej: 51987654321

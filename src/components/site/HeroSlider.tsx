@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { VideoModal } from "@/components/site/VideoModal";
 import heroAguaymanto from "@/assets/hero-aguaymanto.jpg";
 import heroCampos from "@/assets/hero-campos.jpg";
 import heroCosecha from "@/assets/hero-cosecha.jpg";
@@ -53,7 +54,9 @@ export function HeroSlider() {
   return () => window.clearInterval(id);
   }, [index]);
 
-  const current = slides[index] ?? slides[0]!;
+  const current = slides[index] ?? slides[0];
+  if (!current) return null;
+
   return (
     <section
       aria-label="Presentación principal"
@@ -113,6 +116,7 @@ export function HeroSlider() {
                 </Button>
               ))}
             </div>
+            <VideoModal />
           </div>
         </div>
       </div>

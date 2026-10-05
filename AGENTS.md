@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Editable site content lives in src/config/site.ts and src/data/*.ts; components read from there so the client can update text/contact data without touching layout.
+- Promotional video details live in site configuration and render through the shared fullscreen video dialog, keeping campaign content separate from layout.
