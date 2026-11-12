@@ -39,7 +39,7 @@ function Contacto() {
     { Icon: MessageCircle, label: "WhatsApp", value: c.whatsappLabel, href: whatsappLink() },
     { Icon: Phone, label: "Teléfono", value: c.phone },
     { Icon: Mail, label: "Correo electrónico", value: c.email },
-    { Icon: MapPin, label: "Dirección", value: `${c.address}, ${c.city}` },
+    { Icon: MapPin, label: "Dirección", value: c.city ? `${c.address}, ${c.city}` : c.address },
     { Icon: Clock, label: "Horario de atención", value: c.hours },
   ];
 

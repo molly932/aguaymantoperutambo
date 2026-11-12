@@ -16,14 +16,14 @@ export const siteConfig = {
     youtubeEmbedUrl: "https://www.youtube.com/embed/KquI_AS5ChY?autoplay=1&rel=0",
   },
   contact: {
-    phone: "[TELÉFONO]",
+    phone: "+51 932026015",
     // Número en formato internacional sin signos, ej: 51987654321
-    whatsapp: "51900000000",
-    whatsappLabel: "[WHATSAPP]",
-    email: "[CORREO]",
-    address: "[DIRECCIÓN]",
-    city: "[CIUDAD]",
-    hours: "[HORARIO DE ATENCIÓN]",
+    whatsapp: "51948700621",
+    whatsappLabel: "+51 948 700 621",
+    email: "ventas@aguaymantoperumiskiaco.com",
+    address: "Comunidad Miskiaco S/N Limatambo - Anta - Cusco",
+    city: "",
+    hours: "Lunes - Viernes, de 8:30am - 5:30pm",
   },
   whatsappMessage:
     "Hola, estoy interesado en sus productos de aguaymanto y quisiera recibir información.",

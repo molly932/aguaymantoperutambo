@@ -60,7 +60,7 @@ export function Footer() {
             <li className="flex items-start gap-2">
               <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
               <span>
-                {siteConfig.contact.address}, {siteConfig.contact.city}
+                {siteConfig.contact.address}{siteConfig.contact.city ? `, ${siteConfig.contact.city}` : ""}
               </span>
             </li>
           </ul>
