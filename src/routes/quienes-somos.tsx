@@ -51,7 +51,7 @@ function QuienesSomos() {
       <section id="nuestra-empresa" className="py-20 sm:py-24">
         <div className="container-page grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <SectionTitle eyebrow="Nuestra empresa" title="Quiénes somos y qué hacemos" />
+            <SectionTitle eyebrow="Nuestra empresa exitosa" title="Quiénes somos y qué hacemos" />
             <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
                 Somos una empresa peruana dedicada a la producción y comercialización de
